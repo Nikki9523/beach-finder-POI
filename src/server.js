@@ -7,6 +7,7 @@ import Joi from "joi";
 import { fileURLToPath } from "url";
 import Handlebars from "handlebars";
 import { webRoutes } from "./web-routes.js";
+import { apiRoutes } from "./api-routes.js";
 import { db } from "./models/db.js";
 import { accountsController } from "./controllers/accounts-controller.js";
 
@@ -57,11 +58,10 @@ async function init() {
   console.log("Server running on %s", server.info.uri);
 } */
 
-
 db.init("mongo");
 server.route(webRoutes);
+server.route(apiRoutes);
 await server.start();
-console.log("Server running on %s", server.info.uri);
 }
 
 process.on("unhandledRejection", (err) => {
