@@ -39,9 +39,9 @@ export const beachJsonStore = {
   },
 
   async updateBeach(beach, updatedBeach) {
-    beach.title = updatedBeach.title;
-    beach.artist = updatedBeach.artist;
-    beach.duration = updatedBeach.duration;
+    beach.name = updatedBeach.name;
+    beach.waterQuality = updatedBeach.waterQuality;
+    beach.beachLength = updatedBeach.beachLength;
     await db.write();
   },
 };

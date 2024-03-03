@@ -1,9 +1,9 @@
 <table class="table is-fullwidth">
   <thead>
     <tr>
-      <th>Beach</th>
-      <th>Artist</th>
-      <th>Duration</th>
+      <th>Beach Name</th>
+      <th>Water Quality</th>
+      <th>Beach Length</th>
       <th></th>
     </tr>
   </thead>
@@ -11,13 +11,13 @@
     {{#each location.beaches}}
       <tr>
         <td>
-          {{title}}
+          {{name}}
         </td>
         <td>
-          {{artist}}
+          {{waterQuality}}
         </td>
         <td>
-          {{duration}}
+          {{beachLength}}
         </td>
         <td>
           <a href="/location/{{../location._id}}/deletebeach/{{_id}}" class="ui icon button">
