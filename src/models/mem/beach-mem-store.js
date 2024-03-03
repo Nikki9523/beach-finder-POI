@@ -36,8 +36,8 @@ export const beachMemStore = {
   },
 
   async updatebeach(beach, updatedbeach) {
-    beach.title = updatedbeach.title;
-    beach.artist = updatedbeach.artist;
-    beach.duration = updatedbeach.duration;
+    beach.name = updatedbeach.name;
+    beach.waterQuality = updatedbeach.waterQuality;
+    beach.beachLength = updatedbeach.beachLength;
   },
 };
