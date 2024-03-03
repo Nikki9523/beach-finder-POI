@@ -36,7 +36,6 @@
     "call-bind": "^1.0.7",
     "callsites": "^3.1.0",
     "camelcase": "^6.3.0",
-    "chai": "^5.1.0",
     "chalk": "^4.1.2",
     "check-error": "^2.0.0",
     "chokidar": "^3.5.3",
@@ -237,6 +236,7 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
+    "chai": "^5.1.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -246,7 +246,8 @@
   },
   "scripts": {
     "start": "node src/server.js",
-    "lint": "./node_modules/.bin/eslint . --ext .js"
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "test": "mocha --ui tdd test/**.js -exit"
   },
   "author": "Nicola Stack",
   "license": "ISC"
