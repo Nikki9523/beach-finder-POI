@@ -25,3 +25,20 @@ export const testUsers = [
     password: "secret",
   },
 ];
+
+
+export const Waterford = {
+  title: "Waterford"
+};
+
+export const testPlaylists = [
+  {
+    name: "Tramore"
+  },
+  {
+    name: "Dunmore"
+  },
+  {
+    name: "Woodstown"
+  }
+];
