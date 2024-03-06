@@ -5,36 +5,58 @@
       "lastName": "Simpson",
       "email": "homer@simpson.com",
       "password": "secret",
-      "_id": "7dbc984c-9233-438e-bcea-914b6bee18c2"
+      "_id": "96691f7c-a319-46cf-82ae-d7f087736317"
     },
     {
       "firstName": "Marge",
       "lastName": "Simpson",
       "email": "marge@simpson.com",
       "password": "secret",
-      "_id": "4ddab4c2-3728-4eb0-a15f-1048505517e1"
+      "_id": "43bf340b-4953-4b63-a646-dd52378fe381"
     },
     {
       "firstName": "Bart",
       "lastName": "Simpson",
       "email": "bart@simpson.com",
       "password": "secret",
-      "_id": "9bb966c4-97e1-4f6b-916a-52b71fb8bde8"
-    },
-    {
-      "firstName": "Maggie",
-      "lastName": "Simpson",
-      "email": "maggie@simpson.com",
-      "password": "secret",
-      "_id": "98d54f6c-9096-474b-9f26-3111277a16fe"
+      "_id": "d483a3d9-8a0b-4022-a5ee-f063f03e91c7"
     }
   ],
   "locations": [
     {
-      "userid": "ff494c1a-c296-43e2-8db5-20cbcf83e46e",
-      "title": "Test",
-      "_id": "47974933-1c62-438f-8b0e-68d46687a693"
+      "name": "Waterford",
+      "_id": "af743d78-8cb5-496c-a46e-86b74eecfd3f"
+    },
+    {
+      "name": "Cork",
+      "_id": "0e4c20f1-ddaf-49b6-ad38-b93ccfa6486c"
+    },
+    {
+      "name": "Galway",
+      "_id": "064a8644-bf18-454a-8817-441f4d3c26fc"
     }
   ],
-  "beaches": [] 
+  "beaches": [
+    {
+      "name": "Woodstown",
+      "waterQuality": "Good",
+      "beachLength": 5,
+      "_id": "f190789f-59e4-4827-be15-e7046af2f9f7",
+      "locationid": "96e4f36f-3cd3-4945-983f-f66420e71731"
+    },
+    {
+      "name": "Stradbally",
+      "waterQuality": "Poor",
+      "beachLength": 5,
+      "_id": "81a05fab-88c9-41cc-9c56-598c436c5a0a",
+      "locationid": "96e4f36f-3cd3-4945-983f-f66420e71731"
+    },
+    {
+      "name": "Kilfarrasy",
+      "waterQuality": "Excellent",
+      "beachLength": 5,
+      "_id": "42e95cc3-9090-43ad-8868-b5c5533b8639",
+      "locationid": "96e4f36f-3cd3-4945-983f-f66420e71731"
+    }
+  ]
 }

@@ -27,18 +27,42 @@ export const testUsers = [
 ];
 
 
-export const Waterford = {
-  title: "Waterford"
+export const waterford = {
+  name: "Waterford"
 };
 
-export const testPlaylists = [
+export const testLocations = [
   {
-    name: "Tramore"
+    name: "Waterford"
   },
   {
-    name: "Dunmore"
+    name: "Cork"
   },
   {
-    name: "Woodstown"
+    name: "Galway"
   }
+];
+
+export const tramore = {
+    name: "Tramore",
+    waterQuality: "Excellent",
+    beachLength: 5
+};
+
+export const testBeaches = [
+  {
+    name: "Woodstown",
+    waterQuality: "Good",
+    beachLength: 5
+  },
+  {
+    name: "Stradbally",
+    waterQuality: "Poor",
+    beachLength: 5
+  },
+  {
+    name: "Kilfarrasy",
+    waterQuality: "Excellent",
+    beachLength: 5
+  },
 ];

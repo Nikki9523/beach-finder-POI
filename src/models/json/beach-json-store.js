@@ -23,17 +23,17 @@ export const beachJsonStore = {
 
   async getBeachById(id) {
     await db.read();
-    return db.data.beaches.find((beach) => beach._id === id);
+    return db.data.beaches.find((beach) => beach._id === id) || null;
   },
 
-  async deleteBeach(id) {
+  async deleteBeachById(id) {
     await db.read();
     const index = db.data.beaches.findIndex((beach) => beach._id === id);
-    db.data.beaches.splice(index, 1);
+    if (index !== -1) db.data.beaches.splice(index, 1);
     await db.write();
   },
 
-  async deleteAllBeaches() {
+  async deleteAll() {
     db.data.beaches = [];
     await db.write();
   },
