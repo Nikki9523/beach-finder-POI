@@ -25,9 +25,9 @@ export const locationController = {
     handler: async function (request, h) {
       const location = await db.locationStore.getLocationById(request.params.id);
       const newBeach = {
-        title: request.payload.title,
-        artist: request.payload.artist,
-        duration: Number(request.payload.duration),
+        name: request.payload.name,
+        waterQuality: request.payload.waterQuality,
+        beachLength: Number(request.payload.beachLength),
       };
       await db.beachStore.addBeach(location._id, newBeach);
       return h.redirect(`/location/${location._id}`);

@@ -13,9 +13,9 @@ export const UserCredentialsSpec = {
 };
 
 export const BeachSpec = {
-  title: Joi.string().required(),
-  artist: Joi.string().required(),
-  duration: Joi.number().allow("").optional(),
+  name: Joi.string().required(),
+  waterQuality: Joi.string().allow("").optional(),
+  beachLength: Joi.number().allow("").optional(),
 };
 
 export const LocationSpec = {
