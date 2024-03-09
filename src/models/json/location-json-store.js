@@ -20,7 +20,7 @@ export const locationJsonStore = {
   async getLocationById(id) {
     await db.read();
     const list = db.data.locations.find((location) => location._id === id);
-  //  list.beaches = await beachJsonStore.getBeachesByLocationId(list._id);
+    list.beaches = await beachJsonStore.getBeachesByLocationId(list._id);
     return list || null;
   },
 
