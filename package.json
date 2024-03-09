@@ -100,6 +100,7 @@
     "gopd": "^1.0.1",
     "graphemer": "^1.4.0",
     "handlebars": "^4.7.8",
+    "hapi-swagger": "^17.2.1",
     "has-bigints": "^1.0.2",
     "has-flag": "^4.0.0",
     "has-property-descriptors": "^1.0.2",
