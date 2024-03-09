@@ -1,6 +1,8 @@
 import Vision from "@hapi/vision";
 import Hapi from "@hapi/hapi";
 import Cookie from "@hapi/cookie";
+import HapiSwagger from "hapi-swagger";
+import Inert from "@hapi/inert";
 import dotenv from "dotenv";
 import path from "path";
 import Joi from "joi";
@@ -10,6 +12,13 @@ import { webRoutes } from "./web-routes.js";
 import { db } from "./models/db.js";
 import { accountsController } from "./controllers/accounts-controller.js";
 import { apiRoutes } from "./api-routes.js";
+
+const swaggerOptions = {
+  info: {
+    title: "BeachFinder API",
+    version: "0.1",
+  },
+};
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,6 +37,16 @@ async function init() {
   await server.register(Vision);
   await server.register(Cookie);
   server.validator(Joi);
+  await server.register(Inert);
+
+  await server.register([
+    Inert,
+    Vision,
+    {
+      plugin: HapiSwagger,
+      options: swaggerOptions,
+    },
+  ]);
 
   server.views({
     engines: {
