@@ -8,6 +8,7 @@
     "test": "test"
   },
   "dependencies": {
+    "@hapi/boom": "^10.0.1",
     "@hapi/cookie": "^12.0.1",
     "@hapi/hapi": "^21.3.3",
     "@hapi/vision": "^7.0.3",
@@ -237,6 +238,7 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
+    "axios": "^1.6.7",
     "chai": "^5.1.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -248,7 +250,7 @@
   "scripts": {
     "start": "node src/server.js",
     "lint": "./node_modules/.bin/eslint . --ext .js",
-    "test": "mocha --ui tdd test/**.js -exit"
+    "test": "mocha --ui tdd test/**/*.js -exit"
   },
   "author": "Nicola Stack",
   "license": "ISC"

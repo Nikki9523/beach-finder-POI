@@ -1,3 +1,5 @@
+export const serviceUrl = "http://laptop-hjqvbetr:8080";
+
 export const maggie = {
   firstName: "Maggie",
   lastName: "Simpson",
