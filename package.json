@@ -11,6 +11,7 @@
     "@hapi/boom": "^10.0.1",
     "@hapi/cookie": "^12.0.1",
     "@hapi/hapi": "^21.3.3",
+    "@hapi/inert": "^7.1.0",
     "@hapi/vision": "^7.0.3",
     "acorn": "^8.11.3",
     "acorn-jsx": "^5.3.2",
@@ -100,6 +101,7 @@
     "gopd": "^1.0.1",
     "graphemer": "^1.4.0",
     "handlebars": "^4.7.8",
+    "hapi-swagger": "^17.2.1",
     "has-bigints": "^1.0.2",
     "has-flag": "^4.0.0",
     "has-property-descriptors": "^1.0.2",
@@ -245,12 +247,14 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
     "mocha": "^10.3.0",
+    "nodemon": "^3.1.0",
     "prettier": "^3.2.5"
   },
   "scripts": {
     "start": "node src/server.js",
     "lint": "./node_modules/.bin/eslint . --ext .js",
-    "test": "mocha --ui tdd test/**/*.js -exit"
+    "test": "mocha --ui tdd test/**/*.js -exit",
+    "dev": "npx nodemon  src/server.js"
   },
   "author": "Nicola Stack",
   "license": "ISC"
