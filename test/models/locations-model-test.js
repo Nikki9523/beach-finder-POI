@@ -1,7 +1,7 @@
 import { assert } from "chai";
-import { db } from "../src/models/db.js";
-import { assertSubset } from "./test-utils.js";
-import { waterford, testLocations } from "./fixtures.js";
+import { db } from "../../src/models/db.js";
+import { assertSubset } from "../test-utils.js";
+import { waterford, testLocations } from "../fixtures.js";
 
 
   suite("Location Model tests", () => {
