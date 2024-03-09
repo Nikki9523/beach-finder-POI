@@ -12,6 +12,9 @@ export const userApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Get all userApi",
+    notes: "Returns details of all userApi",
   },
 
   findOne: {
@@ -27,6 +30,9 @@ export const userApi = {
         return Boom.serverUnavailable("No User with this id");
       }
     },
+    tags: ["api"],
+    description: "Get specific userApi with id",
+    notes: "Returns details of specific user",
   },
 
   create: {
@@ -42,6 +48,9 @@ export const userApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Create user",
+    notes: "Create user with userApi",
   },
 
   deleteAll: {
@@ -54,5 +63,8 @@ export const userApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Delete all userApi",
+    notes: "Delete all users userApi",
   },
 };
