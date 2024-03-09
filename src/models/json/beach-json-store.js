@@ -40,6 +40,10 @@ export const beachJsonStore = {
 
   async updateBeach(beach, updatedBeach) {
     beach.name = updatedBeach.name;
+    beach.description = updatedBeach.description;
+    beach.location = updatedBeach.location;
+    beach.longitude = updatedBeach.longitude;
+    beach.latitude = updatedBeach.latitude;
     beach.waterQuality = updatedBeach.waterQuality;
     beach.beachLength = updatedBeach.beachLength;
     await db.write();

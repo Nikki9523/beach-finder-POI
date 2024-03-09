@@ -26,8 +26,12 @@ export const locationController = {
       const location = await db.locationStore.getLocationById(request.params.id);
       const newBeach = {
         name: request.payload.name,
+        description: request.payload.description,
+        location: request.payload.location,
+        latitude: Number(request.payload.latitude),
+        longitude: Number(request.payload.longitude),
         waterQuality: request.payload.waterQuality,
-        beachLength: Number(request.payload.beachLength),
+        beachLength: Number(request.payload.beachLength)
       };
       await db.beachStore.addBeach(location._id, newBeach);
       return h.redirect(`/location/${location._id}`);
@@ -37,7 +41,7 @@ export const locationController = {
   deleteBeach: {
     handler: async function (request, h) {
       const location = await db.locationStore.getLocationById(request.params.id);
-      await db.beachStore.deleteBeach(request.params.beachid);
+      await db.beachStore.deleteBeachById(request.params.beachid);
       return h.redirect(`/location/${location._id}`);
     },
   },

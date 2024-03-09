@@ -16,12 +16,15 @@ export const locationJsonStore = {
     return location;
   },
 
-
   async getLocationById(id) {
     await db.read();
-    const list = db.data.locations.find((location) => location._id === id);
-  //  list.beaches = await beachJsonStore.getBeachesByLocationId(list._id);
-    return list || null;
+    let list = db.data.locations.find((playlist) => playlist._id === id);
+    if (list) {
+      list.beaches = await beachJsonStore.getBeachesByLocationId(list._id);
+    } else {
+      list = null;
+    }
+    return list;
   },
 
   async getUserLocations(userid) {
