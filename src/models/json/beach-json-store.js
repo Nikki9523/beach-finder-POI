@@ -7,18 +7,18 @@ export const beachJsonStore = {
     return db.data.beaches;
   },
 
-  async addBeach(locationId, beach) {
+  async addBeach(categoryId, beach) {
     await db.read();
     beach._id = v4();
-    beach.locationid = locationId;
+    beach.categoryid = categoryId;
     db.data.beaches.push(beach);
     await db.write();
     return beach;
   },
 
-  async getBeachesByLocationId(id) {
+  async getBeachesByCategoryId(id) {
     await db.read();
-    return db.data.beaches.filter((beach) => beach.locationid === id);
+    return db.data.beaches.filter((beach) => beach.categoryid === id);
   },
 
   async getBeachById(id) {
@@ -41,7 +41,7 @@ export const beachJsonStore = {
   async updateBeach(beach, updatedBeach) {
     beach.name = updatedBeach.name;
     beach.description = updatedBeach.description;
-    beach.location = updatedBeach.location;
+    beach.category = updatedBeach.category;
     beach.longitude = updatedBeach.longitude;
     beach.latitude = updatedBeach.latitude;
     beach.waterQuality = updatedBeach.waterQuality;

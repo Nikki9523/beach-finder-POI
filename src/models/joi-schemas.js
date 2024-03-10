@@ -24,14 +24,13 @@ export const UserCredentialsSpec = {
 
 export const BeachSpec = {
   name: Joi.string().required(),
-  location: Joi.string().required(),
   description: Joi.string().required(),
   longitude: Joi.number().required(),
   latitude: Joi.number().required(),
-  waterQuality: Joi.string().allow("").optional(),
+  waterQuality: Joi.string().allow("").required(),
   beachLength: Joi.number().allow("").optional(),
 };
 
-export const LocationSpec = {
-  title: Joi.string().required(),
+export const CategorySpec = {
+  waterQuality: Joi.string().required(),
 };

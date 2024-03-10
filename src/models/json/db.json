@@ -5,35 +5,35 @@
       "lastName": "Simpson",
       "email": "homer@simpson.com",
       "password": "secret",
-      "_id": "96691f7c-a319-46cf-82ae-d7f087736317"
+      "_id": "237c5b91-e958-466d-8ea3-bb828b623fcf"
     },
     {
       "firstName": "Marge",
       "lastName": "Simpson",
       "email": "marge@simpson.com",
       "password": "secret",
-      "_id": "43bf340b-4953-4b63-a646-dd52378fe381"
+      "_id": "a789c52d-64f8-43ac-9533-23c48869387f"
     },
     {
       "firstName": "Bart",
       "lastName": "Simpson",
       "email": "bart@simpson.com",
       "password": "secret",
-      "_id": "d483a3d9-8a0b-4022-a5ee-f063f03e91c7"
+      "_id": "fb02e1de-b8ea-4145-83d7-d7a3a313232f"
     }
   ],
-  "locations": [
+  "categories": [
     {
-      "name": "Waterford",
-      "_id": "af743d78-8cb5-496c-a46e-86b74eecfd3f"
+      "waterQuality": "Excellent",
+      "_id": "ef2443a3-1b13-4de7-bd74-acb4f430dcec"
     },
     {
-      "name": "Cork",
-      "_id": "0e4c20f1-ddaf-49b6-ad38-b93ccfa6486c"
+      "waterQuality": "Poor",
+      "_id": "77dd56bd-6deb-4f00-bfdf-2d1d05b0a7b3"
     },
     {
-      "name": "Galway",
-      "_id": "064a8644-bf18-454a-8817-441f4d3c26fc"
+      "waterQuality": "Sufficient",
+      "_id": "8cf44946-a016-4261-bed8-a8117dc2cfed"
     }
   ],
   "beaches": [
@@ -41,22 +41,22 @@
       "name": "Woodstown",
       "waterQuality": "Good",
       "beachLength": 5,
-      "_id": "f190789f-59e4-4827-be15-e7046af2f9f7",
-      "locationid": "96e4f36f-3cd3-4945-983f-f66420e71731"
+      "_id": "be377395-8d91-423e-a66c-14839235268c",
+      "categoryid": "96e4f36f-3cd3-4945-983f-f66420e71731"
     },
     {
       "name": "Stradbally",
       "waterQuality": "Poor",
       "beachLength": 5,
-      "_id": "81a05fab-88c9-41cc-9c56-598c436c5a0a",
-      "locationid": "96e4f36f-3cd3-4945-983f-f66420e71731"
+      "_id": "c6b7343a-2699-463f-90ea-14056a3790f1",
+      "categoryid": "96e4f36f-3cd3-4945-983f-f66420e71731"
     },
     {
       "name": "Kilfarrasy",
       "waterQuality": "Excellent",
       "beachLength": 5,
-      "_id": "42e95cc3-9090-43ad-8868-b5c5533b8639",
-      "locationid": "96e4f36f-3cd3-4945-983f-f66420e71731"
+      "_id": "196039f3-7bbd-4210-95f9-5c9b803a450c",
+      "categoryid": "96e4f36f-3cd3-4945-983f-f66420e71731"
     }
   ]
 }

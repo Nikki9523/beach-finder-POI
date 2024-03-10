@@ -1,14 +1,14 @@
-{{#each locations}}
+{{#each categories}}
   <div class="box box-link-hover-shadow">
-    <h2 class="title">
-      {{title}}
+    <h2 class="Category">
+      {{waterQuality}}
     </h2>
-    <a href="/location/{{_id}}" class="button">
+    <a href="/category/{{_id}}" class="button">
       <span class="icon is-small">
         <i class="fas fa-folder-open"></i>
       </span>
     </a>
-    <a href="/dashboard/deletelocation/{{_id}}" class="button">
+    <a href="/dashboard/deletecategory/{{_id}}" class="button">
       <i class="fas fa-trash"></i>
     </a>
   </div>
