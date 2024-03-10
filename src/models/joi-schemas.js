@@ -36,6 +36,9 @@ export const BeachSpec = Joi.object()
 })
 .label("Beach");
 
+
+export const BeachesArray = Joi.array().items(BeachSpec).label("BeachesArray");
+
 export const CategorySpec = Joi.object()
 .keys({
   waterQuality: Joi.string().required().example("Excellent"),
