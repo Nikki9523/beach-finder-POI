@@ -1,6 +1,7 @@
 import Boom from "@hapi/boom";
 import { db } from "../models/db.js";
-import { BeachSpec } from "../models/joi-schemas.js";
+import { BeachesArray } from "../models/joi-schemas.js";
+import { validationError } from "./logger.js";
 
 export const beachesApi = {
   find: {
@@ -13,6 +14,10 @@ export const beachesApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Get all beachesApi",
+    notes: "Returns details of all beachesapi",
+    response: { schema: BeachesArray, failAction: validationError },
   },
 
   findOne: {
@@ -28,6 +33,10 @@ export const beachesApi = {
         return Boom.serverUnavailable("No Beach with this id");
       }
     },
+    tags: ["api"],
+    description: "Find all beachesApi",
+    notes: "Returns details of specific beach",
+    response: { schema: BeachesArray, failAction: validationError },
   },
 
   create: {
@@ -44,6 +53,10 @@ export const beachesApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Create beachesApi",
+    notes: "Create beachesapi",
+    response: { schema: BeachesArray, failAction: validationError },
   },
 
   deleteOne: {
@@ -60,6 +73,10 @@ export const beachesApi = {
         return Boom.serverUnavailable("No Beach with this id");
       }
     },
+    tags: ["api"],
+    description: "Delete specific beach api",
+    notes: "Delete specific beach",
+    response: { schema: BeachesArray, failAction: validationError },
   },
 
   deleteAll: {
@@ -72,5 +89,9 @@ export const beachesApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Delete all beachesApi",
+    notes: "Delete all beachesapi",
+    response: { schema: BeachesArray, failAction: validationError },
   },
 };
