@@ -24,7 +24,7 @@ export const UserCredentialsSpec = {
 
 export const BeachSpec = {
   name: Joi.string().required(),
-  location: Joi.string().required(),
+  category: Joi.string().required(),
   description: Joi.string().required(),
   longitude: Joi.number().required(),
   latitude: Joi.number().required(),
@@ -32,6 +32,6 @@ export const BeachSpec = {
   beachLength: Joi.number().allow("").optional(),
 };
 
-export const LocationSpec = {
+export const CategorySpec = {
   title: Joi.string().required(),
 };

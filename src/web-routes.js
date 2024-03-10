@@ -1,7 +1,7 @@
 import { aboutController } from "./controllers/about-controller.js";
 import { accountsController } from "./controllers/accounts-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
-import { locationController } from "./controllers/location-controller.js";
+import { categoryController } from "./controllers/category-controller.js";
 
 export const webRoutes = [
   { method: "GET", path: "/", config: accountsController.index },
@@ -14,10 +14,10 @@ export const webRoutes = [
   { method: "GET", path: "/about", config: aboutController.index },
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
-  { method: "POST", path: "/dashboard/addlocation", config: dashboardController.addLocation },
-  { method: "GET", path: "/dashboard/deletelocation/{id}", config: dashboardController.deleteLocation },
+  { method: "POST", path: "/dashboard/addcategory", config: dashboardController.addCategory },
+  { method: "GET", path: "/dashboard/deletecategory/{id}", config: dashboardController.deleteCategory },
 
-  { method: "GET", path: "/location/{id}", config: locationController.index },
-  { method: "POST", path: "/location/{id}/addbeach", config: locationController.addBeach },
-  { method: "GET", path: "/location/{id}/deletebeach/{beachid}", config: locationController.deleteBeach },
+  { method: "GET", path: "/category/{id}", config: categoryController.index },
+  { method: "POST", path: "/category/{id}/addbeach", config: categoryController.addBeach },
+  { method: "GET", path: "/category/{id}/deletebeach/{beachid}", config: categoryController.deleteBeach },
 ];

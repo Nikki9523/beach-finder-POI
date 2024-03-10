@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <th>Beach Name</th>
-      <th>Location</th>
+      <th>Category</th>
       <th>Description</th>
       <th>Longitude</th>
       <th>Latitude</th>
@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each location.beaches}}
+    {{#each category.beaches}}
       <tr>
         <td>
           {{name}}
@@ -21,7 +21,7 @@
           {{description}}
         </td>
          <td>
-          {{location}}
+          {{category}}
         </td>
         <td>
           {{longitude}}
@@ -36,7 +36,7 @@
           {{beachLength}}
         </td>
         <td>
-          <a href="/location/{{../location._id}}/deletebeach/{{_id}}" class="ui icon button">
+          <a href="/category/{{../category._id}}/deletebeach/{{_id}}" class="ui icon button">
             <i class="fas fa-trash"></i>
           </a>
         </td>

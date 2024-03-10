@@ -7,23 +7,23 @@ export const beachMemStore = {
     return beaches;
   },
 
-  async addBeach(locationId, beach) {
+  async addBeach(categoryId, beach) {
     beach._id = v4();
-    beach.locationid = locationId;
+    beach.categoryid = categoryId;
     beaches.push(beach);
     return beach;
   },
 
-  async getBeachesByLocationId(id) {
-    return beaches.filter((beach) => beach.locationid === id);
+  async getBeachesByCategoryId(id) {
+    return beaches.filter((beach) => beach.categoryid === id);
   },
 
   async getBeachById(id) {
     return beaches.find((beach) => beach._id === id);
   },
 
-  async getLocationBeaches(locationId) {
-    return beaches.filter((beach) => beach.locationid === locationId);
+  async getCategoryBeaches(categoryId) {
+    return beaches.filter((beach) => beach.categoryid === categoryId);
   },
 
   async deleteBeach(id) {
@@ -31,7 +31,7 @@ export const beachMemStore = {
     beaches.splice(index, 1);
   },
 
-  async deleteAllBeaches() {
+  async deleteAll() {
     beaches = [];
   },
 

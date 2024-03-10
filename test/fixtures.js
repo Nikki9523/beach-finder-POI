@@ -33,7 +33,7 @@ export const waterford = {
   name: "Waterford"
 };
 
-export const testLocations = [
+export const testCategories = [
   {
     name: "Waterford"
   },
