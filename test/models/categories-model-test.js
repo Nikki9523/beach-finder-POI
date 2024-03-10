@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import { db } from "../../src/models/db.js";
 import { assertSubset } from "../test-utils.js";
-import { waterford, testCategories } from "../fixtures.js";
+import { Category, testCategories } from "../fixtures.js";
 
 
   suite("Category Model tests", () => {
@@ -17,9 +17,9 @@ import { waterford, testCategories } from "../fixtures.js";
 
 
   test("create a category", async () => {
-    const newCategory = await db.categoryStore.addCategory(waterford);
+    const newCategory = await db.categoryStore.addCategory(Category);
    // assert.equal(newCategory, waterford);
-   assertSubset(waterford, newCategory);
+   assertSubset(Category, newCategory);
    assert.isDefined(newCategory._id);
   });
 
@@ -32,9 +32,9 @@ import { waterford, testCategories } from "../fixtures.js";
   });
 
   test("get a category - success", async () => {
-    const category = await db.categoryStore.addCategory(waterford);
+    const category = await db.categoryStore.addCategory(Category);
     const returnedCategory = await db.categoryStore.getCategoryById(category._id);
-    assertSubset(waterford, category);
+    assertSubset(Category, category);
 });
 
 

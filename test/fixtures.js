@@ -29,19 +29,19 @@ export const testUsers = [
 ];
 
 
-export const waterford = {
-  name: "Waterford"
+export const Category = {
+  waterQuality: "Excellent"
 };
 
 export const testCategories = [
   {
-    name: "Waterford"
+    waterQuality: "Excellent"
   },
   {
-    name: "Cork"
+    waterQuality: "Poor"
   },
   {
-    name: "Galway"
+    waterQuality: "Sufficient"
   }
 ];
 

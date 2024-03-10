@@ -24,16 +24,16 @@
   ],
   "categories": [
     {
-      "name": "Waterford",
-      "_id": "3ba387be-1d0c-4a46-8b32-566fc150e6d8"
+      "waterQuality": "Excellent",
+      "_id": "ef2443a3-1b13-4de7-bd74-acb4f430dcec"
     },
     {
-      "name": "Cork",
-      "_id": "5464aadb-f1dd-4cc8-9a76-d84dd0f35d17"
+      "waterQuality": "Poor",
+      "_id": "77dd56bd-6deb-4f00-bfdf-2d1d05b0a7b3"
     },
     {
-      "name": "Galway",
-      "_id": "22cd991a-fa41-41c2-a9b8-cf2ae3e1e2e6"
+      "waterQuality": "Sufficient",
+      "_id": "8cf44946-a016-4261-bed8-a8117dc2cfed"
     }
   ],
   "beaches": [
@@ -41,21 +41,21 @@
       "name": "Woodstown",
       "waterQuality": "Good",
       "beachLength": 5,
-      "_id": "3a230843-e638-404e-ae50-d34817fce5f7",
+      "_id": "be377395-8d91-423e-a66c-14839235268c",
       "categoryid": "96e4f36f-3cd3-4945-983f-f66420e71731"
     },
     {
       "name": "Stradbally",
       "waterQuality": "Poor",
       "beachLength": 5,
-      "_id": "52e8a3f5-f802-425e-9c94-8ed579b7a3a8",
+      "_id": "c6b7343a-2699-463f-90ea-14056a3790f1",
       "categoryid": "96e4f36f-3cd3-4945-983f-f66420e71731"
     },
     {
       "name": "Kilfarrasy",
       "waterQuality": "Excellent",
       "beachLength": 5,
-      "_id": "6fd3f11c-4f82-44e9-aae0-ac270bab1abe",
+      "_id": "196039f3-7bbd-4210-95f9-5c9b803a450c",
       "categoryid": "96e4f36f-3cd3-4945-983f-f66420e71731"
     }
   ]
