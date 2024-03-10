@@ -7,7 +7,7 @@ import { Category, testCategories } from "../fixtures.js";
   suite("Category Model tests", () => {
 
   setup(async () => {
-    db.init("json");
+    db.init("mongo");
     await db.categoryStore.deleteAll();
     for (let i = 0; i < testCategories.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop

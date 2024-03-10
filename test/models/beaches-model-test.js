@@ -7,7 +7,7 @@ import { tramore, testBeaches } from "../fixtures.js";
   suite("Beach Model tests", () => {
 
   setup(async () => {
-    db.init("json");
+    db.init("mongo");
     await db.beachStore.deleteAll();
     for (let i = 0; i < testBeaches.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop
