@@ -27,7 +27,7 @@ export const dashboardController = {
       const loggedInUser = request.auth.credentials;
       const newCategory = {
         userid: loggedInUser._id,
-        title: request.payload.title,
+        waterQuality: request.payload.waterQuality,
       };
       await db.categoryStore.addCategory(newCategory);
       return h.redirect("/dashboard");
