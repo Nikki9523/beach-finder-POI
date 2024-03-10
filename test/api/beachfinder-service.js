@@ -24,4 +24,29 @@ export const beachfinderService = {
     const res = await axios.delete(`${this.beachFinderUrl}/api/users`);
     return res.data;
   },
+
+  async createCategory(playlist) {
+    const res = await axios.post(`${this.playtimeUrl}/api/playlists`, playlist);
+    return res.data;
+  },
+
+  async deleteAllCategories() {
+    const response = await axios.delete(`${this.playtimeUrl}/api/playlists`);
+    return response.data;
+  },
+
+  async deleteCategory(id) {
+    const response = await axios.delete(`${this.playtimeUrl}/api/playlists/${id}`);
+    return response;
+  },
+
+  async getAllCategories() {
+    const res = await axios.get(`${this.playtimeUrl}/api/playlists`);
+    return res.data;
+  },
+
+  async getCategory(id) {
+    const res = await axios.get(`${this.playtimeUrl}/api/playlists/${id}`);
+    return res.data;
+  },
 };
