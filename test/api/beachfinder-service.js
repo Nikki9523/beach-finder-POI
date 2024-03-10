@@ -25,28 +25,28 @@ export const beachfinderService = {
     return res.data;
   },
 
-  async createCategory(playlist) {
-    const res = await axios.post(`${this.playtimeUrl}/api/playlists`, playlist);
+  async createCategory(category) {
+    const res = await axios.post(`${this.beachFinderUrl}/api/categories`, category);
     return res.data;
   },
 
   async deleteAllCategories() {
-    const response = await axios.delete(`${this.playtimeUrl}/api/playlists`);
+    const response = await axios.delete(`${this.beachFinderUrl}/api/categories`);
     return response.data;
   },
 
   async deleteCategory(id) {
-    const response = await axios.delete(`${this.playtimeUrl}/api/playlists/${id}`);
+    const response = await axios.delete(`${this.beachFinderUrl}/api/categories/${id}`);
     return response;
   },
 
   async getAllCategories() {
-    const res = await axios.get(`${this.playtimeUrl}/api/playlists`);
+    const res = await axios.get(`${this.beachFinderUrl}/api/categories`);
     return res.data;
   },
 
   async getCategory(id) {
-    const res = await axios.get(`${this.playtimeUrl}/api/playlists/${id}`);
+    const res = await axios.get(`${this.beachFinderUrl}/api/categories/${id}`);
     return res.data;
   },
 };
