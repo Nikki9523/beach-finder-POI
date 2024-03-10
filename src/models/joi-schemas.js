@@ -17,20 +17,27 @@ export const UserArray = Joi.array().items(UserSpec).label("UserArray");
 
 
 
-export const UserCredentialsSpec = {
-  email: Joi.string().email().required(),
-  password: Joi.string().required(),
-};
+export const UserCredentialsSpec = Joi.object()
+  .keys({
+    email: Joi.string().email().example("homer@simpson.com").required(),
+    password: Joi.string().example("secret").required(),
+  })
+  .label("UserCredentials");
 
-export const BeachSpec = {
-  name: Joi.string().required(),
-  description: Joi.string().required(),
-  longitude: Joi.number().required(),
-  latitude: Joi.number().required(),
-  waterQuality: Joi.string().allow("").required(),
-  beachLength: Joi.number().allow("").optional(),
-};
 
-export const CategorySpec = {
-  waterQuality: Joi.string().required(),
-};
+export const BeachSpec = Joi.object()
+.keys({
+  name: Joi.string().required().example("Tramore"),
+  description: Joi.string().required().example("A popular beach located in Waterford"),
+  longitude: Joi.number().required().example(12),
+  latitude: Joi.number().required().example(-100),
+  waterQuality: Joi.string().allow("").required().example("Excellent"),
+  beachLength: Joi.number().allow("").optional().example(5),
+})
+.label("Beach");
+
+export const CategorySpec = Joi.object()
+.keys({
+  waterQuality: Joi.string().required().example("Excellent"),
+})
+.label("Category");
